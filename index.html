@@ -1,12 +1,18 @@
-<DOCTYPE html>
-<html
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+
   <head>
+    <title>Star Wars</title>
+    <meta charset="UTF-8">
+    <script data-n-head="ssr" data-hid="nuxt-color-mode-script" data-pbody="true">!function () { "use strict"; var e = window, s = document, t = s.documentElement, n = ["dark", "light"], o = function (e) { for (var t = e + "=", n = s.cookie.split(";"), o = 0; o < n.length; o++) { for (var a = n[o]; " " === a.charAt(0);)a = a.substring(1, a.length); if (0 === a.indexOf(t)) return a.substring(t.length, a.length) } return null }("nuxt-color-mode") || "system", a = "system" === o ? c() : o; function i(e) { var s = "" + e + ""; t.classList ? t.classList.add(s) : t.className += " " + s } function r(s) { return e.matchMedia("(prefers-color-scheme" + s + ")") } function c() { if (e.matchMedia && "not all" !== r("").media) for (var s of n) if (r(":" + s).matches) return s; return "light" } i(a), e["__NUXT_COLOR_MODE__"] = { preference: o, value: a, getColorScheme: c, addClass: i, removeClass: function (e) { var s = "" + e + ""; t.classList ? t.classList.remove(s) : t.className = t.className.replace(new RegExp(s, "g"), "") } } }();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
   </head>
+
   <body>
-  <div id="modalEl" class="absolute inset-0 flex items-center justify-center" style="display: flex;">
-  <div id="whiteModalEl" class="bg-white max-w-md w-full p-6 text-center" style="transform: translate(0px, 0px); opacity: 1;">
-  <h1 id="bigScoreEl" class="text-4xl font-bold leading-none">6350</h1> <p class="text-sm text-gray-700 mb-4">Points</p> 
-  <div><button id="startGameBtn" class="bg-blue-500 text-white w-full py-3 rounded-full text-sm">
-                Start Game
-              </button></div></div></div>
+    <canvas id="canvas"></canvas>
+    <script src="js/main.js"></script>
   </body>
+
+</html>
